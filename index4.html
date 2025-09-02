@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مضيف العشق الحسيني</title>
+  <style>
+    :root {
+      --bg: #0b0b0c;
+      --panel: #121215;
+      --muted: #8a8f98;
+      --text: #f6f7fb;
+      --brand: #d1a954;
+      --border: #26262b;
+      --radius: 16px;
+      --shadow: 0 6px 18px rgba(0,0,0,.35);
+      --max: 1000px;
+    }
+    body {
+      margin:0;
+      font-family:"Cairo",sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.8;
+    }
+    a{color:var(--brand);text-decoration:none;}
+    header{
+      background:#111;
+      border-bottom:1px solid var(--border);
+      position:sticky;top:0;z-index:50;
+    }
+    .container{max-width:var(--max);margin:auto;padding:0 16px;}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;}
+    nav ul{display:flex;gap:12px;list-style:none;margin:0;padding:0;}
+    nav a{padding:6px 12px;border-radius:10px;}
+    nav a:hover{background:#222;}
+    h1,h2,h3{margin:0 0 10px;}
+    section{padding:40px 0;border-bottom:1px solid var(--border);}
+    .card{
+      background:var(--panel);
+      padding:16px;border-radius:var(--radius);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      margin-bottom:16px;
+    }
+    .event{display:flex;gap:14px;}
+    .event img{width:120px;height:120px;object-fit:cover;border-radius:12px;}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
+    .gallery img{width:100%;border-radius:12px;object-fit:cover;}
+    form label{display:block;margin:8px 0 4px;}
+    form input,textarea{width:100%;padding:10px;border-radius:10px;
+      border:1px solid var(--border);background:#0f0f12;color:var(--text);}
+    button{background:var(--brand);border:0;padding:10px 18px;
+      border-radius:10px;font-weight:bold;cursor:pointer;}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo"><strong>مضيف العشق الحسيني</strong></div>
+      <ul>
+        <li><a href="#archive">الأرشيف</a></li>
+        <li><a href="#upcoming">القادم</a></li>
+        <li><a href="#gallery">المعرض</a></li>
+        <li><a href="#join">المشاركة</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <section class="hero">
+    <h1>اهلا بكم في الموقع الرسمي لمضيف العشق الحسيني</h1>
+    <p>نوثّق هنا جميع التوزيعات التي قدّمها المضيف في عاشوراء، الأعياد الإسلامية، وولادات الأئمة عليهم السلام.</p>
+  </section>
+
+  <section id="archive">
+    <h2>الأرشيف</h2>
+    <div class="card event">
+      <img src="images/mokawama.jpeg" alt="توزيع عيد الفطر">
+      <div>
+        <h3>توزيع عيد المقاومة والتحرير </h3>                                              
+        <p>25 ايار</p>
+      </div>
+    </div>
+  
+
+
+<div class="card event">
+      <img src="images/sha3ban.jpeg" alt="توزيع عيد الفطر">
+      <div>
+        <h3>توزيع 15 شعبان  </h3>                                              
+        <p> ولادة الامام المهدي</p>
+      </div>
+    </div>
+
+
+
+<div class="card event">
+      <img src="images/madifkadeem.jpeg"
+      <div>
+        <h3> المضيف العاشورائي 2024 </h3>                                              
+      
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+  <section id="upcoming">
+    <h2>التوزيعات القادمة</h2>
+    <div class="card">
+      <strong>قادم:</strong> توزيع يوم عاشوراء – ١٠ محرم ١٤٤٧ هـ
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>معرض الصور</h2>
+    <div class="gallery" id="gallery-container">
+      <!-- الصور ستظهر هنا تلقائيًا -->
+    </div>
+  </section>
+
+  <section id="join">
+    <h2>شارك معنا</h2>
+    <form>
+      <label>الاسم</label>
+      <input type="text" name="name" />
+      <label>البريد الإلكتروني</label>
+      <input type="email" name="email" />
+      <label>رسالتك</label>
+      <textarea name="message"></textarea>
+      <br>
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+</div>
+
+<footer style="text-align:center;padding:20px;color:var(--muted);">
+  &copy; 2025 المضيف العاشورائي
+</footer>
+
+<script>
+  // هذا السكربت سيضيف كل الصور الموجودة في مجلد images تلقائيًا
+  const imageNames = ["all.jpeg","rida.jpeg","hassan.jpeg"]; // ضع أسماء الصور هنا
+  const gallery = document.getElementById("gallery-container");
+
+  imageNames.forEach(name => {
+    const img = document.createElement("img");
+    img.src = `images/${name}`;
+    img.alt = "صورة توزيع";
+    gallery.appendChild(img);
+  });
+</script>
+
+</body>
+</html>
